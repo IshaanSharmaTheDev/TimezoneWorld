@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>TimezoneWorld</title><link rel="stylesheet" href="styles/main.css"/></head>
+<body><div id="app">
+  <header class="topbar">
+    <span class="logo">🌍 TimezoneWorld</span>
+    <input id="search-tz" placeholder="Search city or region…" class="tz-search"/>
+  </header>
+  <div class="main">
+    <section>
+      <div id="tz-grid" class="tz-grid"></div>
+    </section>
+    <section class="meeting-finder">
+      <h3>Meeting Finder</h3>
+      <div class="meet-controls">
+        <select id="meet-tz-a"></select>
+        <select id="meet-tz-b"></select>
+        <input type="time" id="meet-time" value="09:00"/>
+        <button id="btn-find-meeting" class="btn-primary">Find Slots</button>
+      </div>
+      <div class="table-wrap"><table id="meeting-table" class="meet-table"></table></div>
+    </section>
+  </div>
+</div>
+<script src="src/zones.js"></script><script src="src/app.js"></script></body></html>
