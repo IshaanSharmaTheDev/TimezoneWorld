@@ -1,36 +1,21 @@
 # TimezoneWorld
 
-A world clock and timezone converter. Add cities, see all their times at once, convert any time between zones instantly.
-
-Built this because I'm always doing math like "it's 9pm here in Jaipur, what time is that in San Francisco?" and I wanted to stop doing it in my head.
+Live timezone clock for 21 world cities with meeting finder, day/night cards, and pin support.
 
 ## Features
+- **21 cities** — live clocks updating every second
+- **Day/night cards** — visual distinction between daytime and nighttime zones
+- **Pin cities** — pin your most-used timezones to the top
+- **Search** — filter by city name or region
+- **Meeting finder** — find overlapping work hours between any two timezones
+- **UTC offset display** — correct offsets including DST
+- **Lightweight** — uses `Intl.DateTimeFormat` natively, no external libs
 
-- Search and add any city in the world
-- All clocks update live every second
-- Click any clock to set a reference time — all others update to show what that moment is in their timezone
-- Shows UTC offset and whether the city is currently on DST
-- Date display — handles the "tomorrow/yesterday" cases when timezones cross midnight
-- Clean minimal UI, no clutter
-
-## How to run
-
+## Structure
 ```
-git clone https://github.com/AadhhyaSharma/TimezoneWorld
-cd TimezoneWorld
-# open index.html
+src/zones.js   # Zone data, getTime(), getOffset(), isDaytime(), diffHours()
+src/app.js     # Rendering, ticker, meeting finder, search, pin
 ```
 
-Works offline once loaded. Uses the browser's built-in `Intl.DateTimeFormat` API for timezone handling — no external timezone database needed.
-
-## Supported timezones
-
-Anything the browser's `Intl` API supports, which is basically every IANA timezone. That's hundreds of cities.
-
-## Default cities
-
-Loads with Jaipur, London, New York, San Francisco, Tokyo, Sydney by default. You can add or remove any of them.
-
----
-
-Simple tool. I use it pretty much daily. Zero dependencies.
+## License
+MIT
